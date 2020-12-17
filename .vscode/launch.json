@@ -5,11 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Current File",
+            "name": "Python: Current File, arguments",
             "type": "python",
             "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
+            "program": "${workspaceFolder}/main.py",
+            "console": "integratedTerminal",
+            "args": ["D:\\dokumenty\\okurz\\Github\\NetpbmKonv\\lol.pbm", "D:\\dokumenty\\okurz\\Github\\NetpbmKonv\\test_pbm.pgm"]
         }
     ]
 }
