@@ -11,7 +11,7 @@ except IndexError:
     Foutput = ""
 
 def Ahelp():
-    print("NetpbmKonv v0.9 by KoleckOLP, MobilePony Inc.\n\n" +
+    print("NetpbmKonv v1.0 by KoleckOLP, MobilePony Inc.\n\n" +
           "main.py \"input_file\" \"output_file\"\n\n" +
           "supported: .pbm, .pgm, .ppm (all in ASCII only)")
 
