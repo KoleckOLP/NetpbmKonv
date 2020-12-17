@@ -56,9 +56,8 @@ def Fconvert(inpt="", outp=""): #inpt says the input type, outp output type
         for i, line in enumerate(PicData): # removes the header
             if i > 1:
                 EdtData = EdtData + [line]
-
-    if "pbm" in os.path.splitext(Finput)[1].lower() and "pgm" in os.path.splitext(Foutput)[1].lower(): # funguje
-        print("pbm to pgm")
+  
+    if "pbm" in os.path.splitext(Finput)[1].lower() and "pgm" in os.path.splitext(Foutput)[1].lower(): # works
         f2.write(f"{PicData[1]}\n255\n")
         for i, data in enumerate(EdtData):
             for c in EdtData[i]:
@@ -67,8 +66,8 @@ def Fconvert(inpt="", outp=""): #inpt says the input type, outp output type
                 else:
                     output = "255\n"
                 FnlData = FnlData+[output]
-    elif "pbm" in os.path.splitext(Finput)[1].lower() and "ppm" in os.path.splitext(Foutput)[1].lower(): #first line on the end + colors?
-        f2.write(f"{PicData[1]}\n")
+    elif "pbm" in os.path.splitext(Finput)[1].lower() and "ppm" in os.path.splitext(Foutput)[1].lower(): # works
+        f2.write(f"{PicData[1]}\n255\n")
         for i, data in enumerate(EdtData):
             for c in EdtData[i]:
                 if c == "1":
@@ -77,7 +76,7 @@ def Fconvert(inpt="", outp=""): #inpt says the input type, outp output type
                     output = "255\n255\n255\n"
                 FnlData = FnlData+[output]
     elif "pgm" in os.path.splitext(Finput)[1].lower() and "pbm" in os.path.splitext(Foutput)[1].lower(): # 3 line from end in the begining (first 3 pixels wrong)
-        f2.write(f"{PicData[1]}\n255\n")
+        f2.write(f"{PicData[1]}\n")
         for data in EdtData:
             if j == 70:
                 j = 0
@@ -89,12 +88,12 @@ def Fconvert(inpt="", outp=""): #inpt says the input type, outp output type
                 output = "0"
             j=j+1
             pbmline = pbmline + output
-    elif "pgm" in os.path.splitext(Finput)[1].lower() and "ppm" in os.path.splitext(Foutput)[1].lower(): # toto funguje
+    elif "pgm" in os.path.splitext(Finput)[1].lower() and "ppm" in os.path.splitext(Foutput)[1].lower(): # works
         f2.write(f"{PicData[1]}\n{limit}\n")
         for i, data in enumerate(EdtData):
             output = f"{data}\n{data}\n{data}\n"
             FnlData = FnlData+[output]
-    elif "ppm" in os.path.splitext(Finput)[1].lower() and "pbm" in os.path.splitext(Foutput)[1].lower(): # (firs 3 pixels wrong)
+    elif "ppm" in os.path.splitext(Finput)[1].lower() and "pbm" in os.path.splitext(Foutput)[1].lower(): # works
         f2.write(f"{PicData[1]}\n")
         for line in EdtData:
             if j < 3:
@@ -116,7 +115,7 @@ def Fconvert(inpt="", outp=""): #inpt says the input type, outp output type
                 output = "0"
             j=j+1
             pbmline = pbmline + output
-    else: # ppm and pgm, funguje
+    else: # ppm and pgm, works
         f2.write(f"{PicData[1]}\n{limit}\n")
         for line in EdtData:
             if j < 3:
