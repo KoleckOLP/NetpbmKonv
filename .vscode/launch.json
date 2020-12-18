@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/main.py",
             "console": "integratedTerminal",
-            "args": ["D:\\dokumenty\\okurz\\Github\\NetpbmKonv\\lol.pgm", "D:\\dokumenty\\okurz\\Github\\NetpbmKonv\\test_pgm.pbm"]
+            "args": ["D:\\dokumenty\\okurz\\Github\\NetpbmKonv\\TestingFiles\\lol.pgm", "D:\\dokumenty\\okurz\\Github\\NetpbmKonv\\TestingFiles\\test_pgm.pbm"]
         }
     ]
 }

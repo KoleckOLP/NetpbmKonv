@@ -44,8 +44,9 @@ def Fconvert(inpt="", outp=""): #inpt says the input type, outp output type
             splitted = PicData[1].split(" ")
             limit = splitted[2]
             for i, line in enumerate(PicData): # removes the header
-                if i > 2:
+                if i > 1:
                     EdtData = EdtData + [line]
+            PicData[1] = f"{splitted[0]} {splitted[1]}"
         except IndexError:
             limit = PicData[2]
             for i, line in enumerate(PicData): # removes the header
@@ -116,7 +117,7 @@ def Fconvert(inpt="", outp=""): #inpt says the input type, outp output type
             j=j+1
             pbmline = pbmline + output
     else: # ppm and pgm, works
-        f2.write(f"{PicData[1]}\n{limit}\n")
+        f2.write(f"{PicData[1]}\n255\n")
         for line in EdtData:
             if j < 3:
                 loin = loin + [line]
