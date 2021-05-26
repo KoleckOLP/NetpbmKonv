@@ -19,3 +19,9 @@ how to use:
 for example:
 
 > python main.py testing\lol.pbm testing\test_pbm.pgm
+
+## This happenedy while debugging her body was fine her face broke.
+![Her Face Broke](promo/broken_face.jpg)
+another promo picture
+![A Lot](promo/a_lot.jpg)
+but please don't use this it's super limited and broken.
